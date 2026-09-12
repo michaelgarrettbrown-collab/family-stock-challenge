@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 2,
+  "calculationVersion": "1.0.0",
+  "title": "Family Stock Challenge",
+  "year": 2026,
+  "asOf": "2026-09-11",
+  "reportingCurrency": "GBP",
+  "rules": [
+    "£100,000 starting capital each",
+    "Trading at quarterly checkpoints",
+    "Dividends ignored",
+    "Values in GBP (FX adjusted)"
+  ],
+  "tradingRules": {
+    "execution": "quarter-end",
+    "fractionalShares": true,
+    "cashAllowed": true,
+    "fees": 0,
+    "dividendsIncluded": false,
+    "shortSelling": false,
+    "externalCashFlows": false
+  },
+  "chart": {
+    "min": 80000,
+    "max": 160000,
+    "barMax": 150000
+  },
+  "players": [
+    {
+      "id": "lee",
+      "name": "Lee",
+      "value": 132345.90030077196,
+      "cash": 0,
+      "return": 32.34590030077196,
+      "startValue": 100000,
+      "holdings": [
+        {
+          "name": "Rheinmetall",
+          "fullName": "Rheinmetall",
+          "ticker": "XETR:RHM",
+          "currency": "EUR",
+          "quantity": 21.68625293325576,
+          "value": 18461.976412594104,
+          "costBasis": 33333.33,
+          "return": -44.61406522362421,
+          "startValue": 33333.33
+        },
+        {
+          "name": "SK Hynix",
+          "fullName": "SK Hynix",
+          "ticker": "XKRX:000660",
+          "currency": "KRW",
+          "quantity": 72.84803451937624,
+          "value": 72801.38817452067,
+          "costBasis": 33333.33,
+          "return": 118.40418636398064,
+          "startValue": 33333.33
+        },
+        {
+          "name": "Chevron",
+          "fullName": "Chevron",
+          "ticker": "XNYS:CVX",
+          "currency": "USD",
+          "quantity": 259.28216214784,
+          "value": 41082.53571365718,
+          "costBasis": 33333.34,
+          "return": 23.24758249145504,
+          "startValue": 33333.34
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "Start",
+          "value": 100000
+        },
+        {
+          "label": "Q1",
+          "value": 97392.3
+        },
+        {
+          "label": "Q2",
+          "value": 144924.57
+        }
+      ],
+      "rank": 1,
+      "color": "green"
+    },
+    {
+      "id": "roger",
+      "name": "Roger",
+      "value": 105484.21445471558,
+      "cash": 0,
+      "return": 5.484214454715586,
+      "startValue": 100000,
+      "holdings": [
+        {
+          "name": "AstraZeneca",
+          "fullName": "AstraZeneca",
+          "ticker": "XLON:AZN",
+          "currency": "GBP",
+          "quantity": 245.09801470588238,
+          "value": 28696.07556176471,
+          "costBasis": 33333.33,
+          "return": -13.911764705882346,
+          "startValue": 33333.33
+        },
+        {
+          "name": "Unilever",
+          "fullName": "Unilever",
+          "ticker": "XLON:ULVR",
+          "currency": "GBP",
+          "quantity": 674.69547616638,
+          "value": 30708.764597712787,
+          "costBasis": 33333.33,
+          "return": -7.873696994231338,
+          "startValue": 33333.33
+        },
+        {
+          "name": "Andrada",
+          "fullName": "Andrada Mining",
+          "ticker": "XLON:ATM",
+          "currency": "GBP",
+          "quantity": 793650.9523809522,
+          "value": 46079.374295238085,
+          "costBasis": 33333.34,
+          "return": 38.23809523809523,
+          "startValue": 33333.34
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "Start",
+          "value": 100000
+        },
+        {
+          "label": "Q1",
+          "value": 88144.89
+        },
+        {
+          "label": "Q2",
+          "value": 96034.43
+        }
+      ],
+      "rank": 2,
+      "color": "blue"
+    },
+    {
+      "id": "michael",
+      "name": "Michael",
+      "value": 95495.4027413338,
+      "cash": 0,
+      "return": -4.504597258666198,
+      "startValue": 100000,
+      "holdings": [
+        {
+          "name": "Experian",
+          "fullName": "Experian",
+          "ticker": "XLON:EXPN",
+          "currency": "GBP",
+          "quantity": 1208.605511240029,
+          "value": 33031.18862218999,
+          "costBasis": 33333.34,
+          "return": -0.9064539521392301,
+          "startValue": 33333.34
+        },
+        {
+          "name": "ServiceNow",
+          "fullName": "ServiceNow",
+          "ticker": "XNYS:NOW",
+          "currency": "USD",
+          "quantity": 391.99214361038634,
+          "value": 38453.92205034506,
+          "costBasis": 33333.33,
+          "return": 15.361777687212964,
+          "startValue": 33333.33
+        },
+        {
+          "name": "Charter",
+          "fullName": "Charter Communications",
+          "ticker": "XNAS:CHTR",
+          "currency": "USD",
+          "quantity": 222.5257166885858,
+          "value": 24010.29206879875,
+          "costBasis": 33333.33,
+          "return": -27.96911659051541,
+          "startValue": 33333.33
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "Start",
+          "value": 100000
+        },
+        {
+          "label": "Q1",
+          "value": 98619.7
+        },
+        {
+          "label": "Q2",
+          "value": 83988.25
+        }
+      ],
+      "rank": 3,
+      "color": "red"
+    }
+  ],
+  "timelineLabels": [
+    {
+      "label": "Start",
+      "date": "2026-01-30"
+    },
+    {
+      "label": "Q1",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Q2",
+      "date": "2026-06-30"
+    },
+    {
+      "label": "Now",
+      "date": "2026-09-11"
+    }
+  ],
+  "checkpointLeaders": [
+    {
+      "label": "Q1",
+      "name": "Michael",
+      "date": "31 Mar"
+    },
+    {
+      "label": "Q2",
+      "name": "Lee",
+      "date": "30 Jun"
+    },
+    {
+      "label": "Now",
+      "name": "Lee",
+      "date": "11 Sept"
+    }
+  ],
+  "biggestWinner": {
+    "name": "SK Hynix",
+    "fullName": "SK Hynix",
+    "ticker": "XKRX:000660",
+    "currency": "KRW",
+    "quantity": 72.84803451937624,
+    "value": 72801.38817452067,
+    "costBasis": 33333.33,
+    "return": 118.40418636398064,
+    "startValue": 33333.33,
+    "player": "Lee"
+  },
+  "transactions": [
+    {
+      "id": "2026-start-michael-experian",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "michael",
+      "instrumentId": "experian",
+      "type": "BUY",
+      "quantity": 1208.605511240029,
+      "price": 27.58,
+      "fxToGbp": 1,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-roger-astrazeneca",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "roger",
+      "instrumentId": "astrazeneca",
+      "type": "BUY",
+      "quantity": 245.09801470588238,
+      "price": 136,
+      "fxToGbp": 1,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-roger-unilever",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "roger",
+      "instrumentId": "unilever",
+      "type": "BUY",
+      "quantity": 674.69547616638,
+      "price": 49.405,
+      "fxToGbp": 1,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-lee-rheinmetall",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "lee",
+      "instrumentId": "rheinmetall",
+      "type": "BUY",
+      "quantity": 21.68625293325576,
+      "price": 1774.5,
+      "fxToGbp": 0.8662,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-michael-servicenow",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "michael",
+      "instrumentId": "servicenow",
+      "type": "BUY",
+      "quantity": 391.99214361038634,
+      "price": 117.01,
+      "fxToGbp": 0.7267388203708365,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-roger-andrada",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "roger",
+      "instrumentId": "andrada",
+      "type": "BUY",
+      "quantity": 793650.9523809522,
+      "price": 0.042,
+      "fxToGbp": 1,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-michael-charter",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "michael",
+      "instrumentId": "charter",
+      "type": "BUY",
+      "quantity": 222.5257166885858,
+      "price": 206.12,
+      "fxToGbp": 0.7267388203708365,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-lee-sk-hynix",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "lee",
+      "instrumentId": "sk-hynix",
+      "type": "BUY",
+      "quantity": 72.84803451937624,
+      "price": 909000,
+      "fxToGbp": 0.0005033811862590427,
+      "feesGbp": 0
+    },
+    {
+      "id": "2026-start-lee-chevron",
+      "date": "2026-01-30",
+      "quarter": "Start",
+      "playerId": "lee",
+      "instrumentId": "chevron",
+      "type": "BUY",
+      "quantity": 259.28216214784,
+      "price": 176.9,
+      "fxToGbp": 0.7267388203708365,
+      "feesGbp": 0
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "Q1",
+      "date": "2026-03-31",
+      "values": {
+        "lee": 97392.3,
+        "roger": 88144.89,
+        "michael": 98619.7
+      }
+    },
+    {
+      "label": "Q2",
+      "date": "2026-06-30",
+      "values": {
+        "lee": 144924.57,
+        "roger": 96034.43,
+        "michael": 83988.25
+      }
+    }
+  ],
+  "changesSincePreviousCheckpoint": [
+    {
+      "playerId": "lee",
+      "player": "Lee",
+      "previousValue": 144924.57,
+      "currentValue": 132345.90030077196,
+      "change": -12578.669699228049
+    },
+    {
+      "playerId": "roger",
+      "player": "Roger",
+      "previousValue": 96034.43,
+      "currentValue": 105484.21445471558,
+      "change": 9449.784454715584
+    },
+    {
+      "playerId": "michael",
+      "player": "Michael",
+      "previousValue": 83988.25,
+      "currentValue": 95495.4027413338,
+      "change": 11507.152741333804
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "calculationVersion": "1.0.0",
+  "game": { "title": "Family Stock Challenge", "reportingCurrency": "GBP", "startDate": "2026-01-30", "currentQuarter": "Q3", "tradingRules": { "execution": "quarter-end", "fractionalShares": true, "cashAllowed": true, "fees": 0, "dividendsIncluded": false, "shortSelling": false, "externalCashFlows": false } },
+  "players": [
+    { "id": "lee", "name": "Lee", "startingCapital": 100000 },
+    { "id": "roger", "name": "Roger", "startingCapital": 100000 },
+    { "id": "michael", "name": "Michael", "startingCapital": 100000 }
+  ],
+  "instruments": [
+    { "id": "experian", "name": "Experian", "ticker": "XLON:EXPN", "exchange": "LSE", "currency": "GBP" },
+    { "id": "astrazeneca", "name": "AstraZeneca", "ticker": "XLON:AZN", "exchange": "LSE", "currency": "GBP" },
+    { "id": "unilever", "name": "Unilever", "ticker": "XLON:ULVR", "exchange": "LSE", "currency": "GBP" },
+    { "id": "rheinmetall", "name": "Rheinmetall", "ticker": "XETR:RHM", "exchange": "Xetra", "currency": "EUR" },
+    { "id": "servicenow", "name": "ServiceNow", "ticker": "XNYS:NOW", "exchange": "NYSE", "currency": "USD" },
+    { "id": "andrada", "name": "Andrada Mining", "ticker": "XLON:ATM", "exchange": "LSE", "currency": "GBP" },
+    { "id": "charter", "name": "Charter Communications", "ticker": "XNAS:CHTR", "exchange": "NASDAQ", "currency": "USD" },
+    { "id": "sk-hynix", "name": "SK Hynix", "ticker": "XKRX:000660", "exchange": "KRX", "currency": "KRW" },
+    { "id": "chevron", "name": "Chevron", "ticker": "XNYS:CVX", "exchange": "NYSE", "currency": "USD" }
+  ],
+  "transactions": [
+    { "id": "2026-start-michael-experian", "date": "2026-01-30", "quarter": "Start", "playerId": "michael", "instrumentId": "experian", "type": "BUY", "quantity": 1208.605511240029, "price": 27.58, "fxToGbp": 1, "feesGbp": 0 },
+    { "id": "2026-start-roger-astrazeneca", "date": "2026-01-30", "quarter": "Start", "playerId": "roger", "instrumentId": "astrazeneca", "type": "BUY", "quantity": 245.09801470588238, "price": 136, "fxToGbp": 1, "feesGbp": 0 },
+    { "id": "2026-start-roger-unilever", "date": "2026-01-30", "quarter": "Start", "playerId": "roger", "instrumentId": "unilever", "type": "BUY", "quantity": 674.69547616638, "price": 49.405, "fxToGbp": 1, "feesGbp": 0 },
+    { "id": "2026-start-lee-rheinmetall", "date": "2026-01-30", "quarter": "Start", "playerId": "lee", "instrumentId": "rheinmetall", "type": "BUY", "quantity": 21.68625293325576, "price": 1774.5, "fxToGbp": 0.8662, "feesGbp": 0 },
+    { "id": "2026-start-michael-servicenow", "date": "2026-01-30", "quarter": "Start", "playerId": "michael", "instrumentId": "servicenow", "type": "BUY", "quantity": 391.99214361038634, "price": 117.01, "fxToGbp": 0.7267388203708365, "feesGbp": 0 },
+    { "id": "2026-start-roger-andrada", "date": "2026-01-30", "quarter": "Start", "playerId": "roger", "instrumentId": "andrada", "type": "BUY", "quantity": 793650.9523809522, "price": 0.042, "fxToGbp": 1, "feesGbp": 0 },
+    { "id": "2026-start-michael-charter", "date": "2026-01-30", "quarter": "Start", "playerId": "michael", "instrumentId": "charter", "type": "BUY", "quantity": 222.5257166885858, "price": 206.12, "fxToGbp": 0.7267388203708365, "feesGbp": 0 },
+    { "id": "2026-start-lee-sk-hynix", "date": "2026-01-30", "quarter": "Start", "playerId": "lee", "instrumentId": "sk-hynix", "type": "BUY", "quantity": 72.84803451937624, "price": 909000, "fxToGbp": 0.0005033811862590427, "feesGbp": 0 },
+    { "id": "2026-start-lee-chevron", "date": "2026-01-30", "quarter": "Start", "playerId": "lee", "instrumentId": "chevron", "type": "BUY", "quantity": 259.28216214784, "price": 176.9, "fxToGbp": 0.7267388203708365, "feesGbp": 0 }
+  ],
+  "valuations": { "date": "2026-09-11", "prices": [
+    { "instrumentId": "experian", "price": 27.33, "fxToGbp": 1 }, { "instrumentId": "astrazeneca", "price": 117.08, "fxToGbp": 1 }, { "instrumentId": "unilever", "price": 45.515, "fxToGbp": 1 },
+    { "instrumentId": "rheinmetall", "price": 990.6, "fxToGbp": 0.8594 }, { "instrumentId": "servicenow", "price": 132.53, "fxToGbp": 0.7402 }, { "instrumentId": "andrada", "price": 0.05806, "fxToGbp": 1 },
+    { "instrumentId": "charter", "price": 145.77, "fxToGbp": 0.7402 }, { "instrumentId": "sk-hynix", "price": 1812000, "fxToGbp": 0.000551523 }, { "instrumentId": "chevron", "price": 214.06, "fxToGbp": 0.7402 }
+  ] },
+  "checkpoints": [
+    { "label": "Q1", "date": "2026-03-31", "values": { "lee": 97392.3, "roger": 88144.89, "michael": 98619.7 } },
+    { "label": "Q2", "date": "2026-06-30", "values": { "lee": 144924.57, "roger": 96034.43, "michael": 83988.25 } }
+  ]
+}

@@ -1,0 +1,4 @@
+.env
+data/notion-current.json
+output/
+node_modules/

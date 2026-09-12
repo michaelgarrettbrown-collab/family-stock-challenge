@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Family Stock Challenge</title>
+  <link rel="stylesheet" href="scorecard.css">
+</head>
+<body>
+  <main class="wrap" id="scorecard" aria-live="polite">
+    <header class="header">
+      <div class="brand"><div class="bars"><i></i><i></i><i></i><i></i></div><div><h1><span id="game-title"></span> <span class="year" id="year"></span></h1><div class="tag">IDEAS · REASONING · RESULTS</div></div></div>
+    </header>
+    <section class="title-row">
+      <div class="title-group"><h2>STANDINGS</h2><div class="asof">AS AT <span id="as-of"></span><br>(<span id="currency"></span>)</div></div>
+    </section>
+    <section class="card standings">
+      <div class="table"><div class="head"><div>Rank</div><div>Player</div><div>Portfolio value</div><div>Return</div></div><div id="leaderboard"></div></div>
+      <div class="barchart" id="bar-chart"></div>
+    </section>
+    <section class="portfolios" id="portfolios"></section>
+    <section class="bottom">
+      <div class="card chart-card"><div class="section-title">PORTFOLIO VALUE OVER TIME</div><div class="chart" id="timeline-chart"></div></div>
+      <div class="side">
+        <div class="card side-card"><div class="section-title">BIGGEST WINNER</div><div class="winner" id="winner"></div></div>
+        <div class="card side-card"><div class="section-title">CHECKPOINT WINNERS</div><div class="checkpoints" id="checkpoints"></div></div>
+      </div>
+    </section>
+    <footer class="footer"><div class="rules" id="rules"></div><div class="signoff" id="signoff"></div></footer>
+    <div class="warnings" id="warnings" hidden></div>
+  </main>
+  <script type="module" src="scorecard.js"></script>
+</body>
+</html>

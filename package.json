@@ -1,0 +1,12 @@
+{
+  "name": "family-stock-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/cli.js build",
+    "preview": "node src/cli.js preview",
+    "serve": "node src/server.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Family Stock Challenge 2026</title>
+<style>
+:root{
+  --bg:#071a2a; --panel:#0b2235; --panel2:#0d2940; --line:#28455b;
+  --text:#f3f7fb; --muted:#b7c6d5; --green:#49e18f; --red:#ff7b87;
+  --cyan:#58bff7; --gold:#ffc846; --orange:#e28c5a;
+}
+*{box-sizing:border-box} body{margin:0;background:#061625;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{width:1080px;min-height:1350px;margin:0 auto;background:linear-gradient(180deg,#071a2a 0%,#081c2f 100%);padding:28px 30px 24px}
+.header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:20px}
+.brand{display:flex;gap:18px;align-items:center}.bars{display:flex;align-items:flex-end;gap:5px;height:50px}.bars i{display:block;width:14px;background:var(--green);border-radius:2px}.bars i:nth-child(1){height:22px}.bars i:nth-child(2){height:31px}.bars i:nth-child(3){height:41px}.bars i:nth-child(4){height:50px}
+h1{font-size:44px;line-height:.95;margin:0 0 8px;font-weight:900;letter-spacing:-1.5px}.year{color:var(--green)}.tag{letter-spacing:7px;color:#dce8f2;font-size:15px}
+.quote{font-size:18px;font-style:italic;color:#eef7ff;text-align:right;line-height:1.35;max-width:265px;padding-top:7px}
+.title-row{display:flex;justify-content:space-between;align-items:center;margin:10px 0 14px}.title-row h2{font-size:46px;margin:0;font-weight:900;letter-spacing:-1px}.asof{font-size:18px;color:var(--muted);line-height:1.2}.motto{border:1px solid #1f8f66;border-radius:13px;padding:14px 24px;font-style:italic;text-align:center;color:#edf9f3;font-size:17px}
+.card{background:linear-gradient(180deg,rgba(12,38,58,.95),rgba(8,29,46,.95));border:1px solid #2b4b63;border-radius:14px}.standings{display:grid;grid-template-columns: 1.15fr .85fr;gap:22px;padding:22px;margin-bottom:18px}
+.table .head,.row{display:grid;grid-template-columns:90px 150px 1fr 120px;align-items:center}.head{font-size:15px;color:#a9bbcb;text-transform:uppercase;letter-spacing:.8px;padding:0 0 8px}.row{min-height:78px;border-top:1px solid #27465e;font-size:23px}.rank{font-size:36px;font-weight:900}.rank.one{color:var(--gold)}.rank.two{color:#d6e2ef}.rank.three{color:var(--orange)}.player{font-weight:800}.value{font-weight:800}.ret.pos{color:var(--green);font-weight:900}.ret.neg{color:var(--red);font-weight:900}
+.barchart{border-left:1px solid #507089;padding:20px 0 0 12px;display:flex;flex-direction:column;justify-content:center;gap:24px}.barrow{display:grid;grid-template-columns:1fr 78px;gap:10px;align-items:center}.track{height:38px;background:#102f48;border-radius:2px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#42d97f,#5bea95)}.fill.blue{background:linear-gradient(90deg,#45aef0,#6ac8ff)}.fill.red{background:linear-gradient(90deg,#ff7381,#ff949d)}.barlabel{font-size:18px;font-weight:800}.axis{display:flex;justify-content:space-between;color:#9db0c0;font-size:12px;padding-top:2px}.axis-title{text-align:center;color:#a9bbcb;font-size:13px;margin-top:5px}
+.portfolios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.pcard{padding:0;overflow:hidden}.phead{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;font-weight:900;border-bottom:1px solid #2b4b63}.phead .name{font-size:17px}.phead .sum{font-size:17px}.greenline{border-color:#1a8559}.blueline{border-color:#2d7ea6}.redline{border-color:#9d4d57}.holding-head,.holding{display:grid;grid-template-columns:1.3fr .7fr .65fr;gap:8px}.holding-head{padding:11px 14px;color:#b8c5d0;font-size:13px}.holding{padding:14px;border-top:1px solid #27465e;font-size:15px}.holding .hval,.holding .hret{text-align:right}.holding .hret{font-weight:800}.holding .hret.pos{color:var(--green)}.holding .hret.neg{color:var(--red)}
+.bottom{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}.chart-card,.side-card{padding:16px}.section-title{font-size:20px;font-weight:900;margin-bottom:12px}.chart{height:260px;position:relative;padding:14px 14px 32px 60px}.ygrid{position:absolute;left:60px;right:15px;top:15px;bottom:34px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 49px,rgba(155,182,204,.16) 50px)}.xgrid{position:absolute;left:60px;right:15px;top:15px;bottom:34px;background:repeating-linear-gradient(to right,transparent 0,transparent 24.5%,rgba(155,182,204,.12) 25%)}svg{position:absolute;left:60px;right:15px;top:15px;bottom:34px;width:calc(100% - 75px);height:calc(100% - 49px);overflow:visible}.ylabel{position:absolute;left:0;color:#b8c7d4;font-size:12px}.y1{top:8px}.y2{top:58px}.y3{top:108px}.y4{top:158px}.y5{top:208px}.xlabels{position:absolute;left:48px;right:8px;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;color:#c5d0da;font-size:12px}
+.side{display:grid;grid-template-rows:1fr 1fr;gap:14px}.winner{display:flex;align-items:center;gap:18px}.rocket{font-size:44px}.winner-main{font-size:21px;font-weight:900}.winner-big{font-size:23px;color:var(--green);font-weight:900}.checkpoints{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}.cp{padding:2px 8px;border-left:1px solid #36566c}.cp:first-child{border-left:none}.cp .q{font-weight:900}.cp .date{font-size:12px;color:#bac8d3}.cp .who{font-size:22px;font-weight:900;margin-top:7px}.who.lead{color:var(--green)}.who.old{color:#ff7d87}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:#b8c7d4;font-size:12px;gap:12px}.rules{display:flex;gap:18px;flex-wrap:wrap}.signoff{font-size:22px;font-style:italic;color:white}
+.small{font-size:12px;color:#9fb1c0}
+@media(max-width:1080px){.wrap{transform-origin:top left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="brand"><div class="bars"><i></i><i></i><i></i><i></i></div><div><h1>FAMILY STOCK CHALLENGE <span class="year">2026</span></h1><div class="tag">IDEAS · REASONING · RESULTS</div></div></div>
+    <div class="quote">Good ideas,<br>better conversations</div>
+  </div>
+
+  <div class="title-row">
+    <div style="display:flex;align-items:flex-end;gap:20px"><h2>STANDINGS</h2><div class="asof">AS AT 11 SEP 2026<br>(GBP)</div></div>
+    <div class="motto">“Same capital. Different ideas.<br>Let the results speak.”</div>
+  </div>
+
+  <div class="card standings">
+    <div class="table">
+      <div class="head"><div>Rank</div><div>Player</div><div>Portfolio value</div><div>Return</div></div>
+      <div class="row"><div class="rank one">🏆 1</div><div class="player">Lee</div><div class="value">£132,346</div><div class="ret pos">+32.3%</div></div>
+      <div class="row"><div class="rank two">🏆 2</div><div class="player">Roger</div><div class="value">£110,615</div><div class="ret pos">+10.6%</div></div>
+      <div class="row"><div class="rank three">🏆 3</div><div class="player">Michael</div><div class="value">£95,495</div><div class="ret neg">−4.5%</div></div>
+    </div>
+    <div class="barchart">
+      <div class="barrow"><div class="track"><div class="fill" style="width:88.2%"></div></div><div class="barlabel">£132.3k</div></div>
+      <div class="barrow"><div class="track"><div class="fill blue" style="width:73.7%"></div></div><div class="barlabel">£110.6k</div></div>
+      <div class="barrow"><div class="track"><div class="fill red" style="width:63.7%"></div></div><div class="barlabel">£95.5k</div></div>
+      <div><div class="axis"><span>0</span><span>50</span><span>100</span><span>150</span></div><div class="axis-title">Portfolio value (£ thousands)</div></div>
+    </div>
+  </div>
+
+  <div class="portfolios">
+    <div class="card pcard greenline"><div class="phead"><div class="name" style="color:var(--green)">LEE'S PORTFOLIO</div><div class="sum">£132,346 <span style="color:var(--green)">(+32.3%)</span></div></div><div class="holding-head"><div>Holding</div><div style="text-align:right">Value (£)</div><div style="text-align:right">Return</div></div><div class="holding"><div>SK Hynix</div><div class="hval">72,801</div><div class="hret pos">+118.4%</div></div><div class="holding"><div>Rheinmetall</div><div class="hval">18,462</div><div class="hret neg">−44.6%</div></div><div class="holding"><div>Chevron</div><div class="hval">41,083</div><div class="hret pos">+23.2%</div></div></div>
+    <div class="card pcard blueline"><div class="phead"><div class="name" style="color:var(--cyan)">ROGER'S PORTFOLIO</div><div class="sum">£110,615 <span style="color:var(--green)">(+10.6%)</span></div></div><div class="holding-head"><div>Holding</div><div style="text-align:right">Value (£)</div><div style="text-align:right">Return</div></div><div class="holding"><div>AstraZeneca</div><div class="hval">28,696</div><div class="hret neg">−13.9%</div></div><div class="holding"><div>Unilever</div><div class="hval">35,840</div><div class="hret pos">+7.5%</div></div><div class="holding"><div>Andrada</div><div class="hval">46,079</div><div class="hret pos">+38.2%</div></div></div>
+    <div class="card pcard redline"><div class="phead"><div class="name" style="color:#ff8a97">MICHAEL'S PORTFOLIO</div><div class="sum">£95,495 <span style="color:var(--red)">(−4.5%)</span></div></div><div class="holding-head"><div>Holding</div><div style="text-align:right">Value (£)</div><div style="text-align:right">Return</div></div><div class="holding"><div>ServiceNow</div><div class="hval">38,454</div><div class="hret pos">+15.4%</div></div><div class="holding"><div>Experian</div><div class="hval">33,031</div><div class="hret neg">−0.9%</div></div><div class="holding"><div>Charter</div><div class="hval">24,010</div><div class="hret neg">−28.0%</div></div></div>
+  </div>
+
+  <div class="bottom">
+    <div class="card chart-card"><div class="section-title">PORTFOLIO VALUE OVER TIME</div><div class="chart"><div class="ygrid"></div><div class="xgrid"></div><div class="ylabel y1">£160k</div><div class="ylabel y2">£140k</div><div class="ylabel y3">£120k</div><div class="ylabel y4">£100k</div><div class="ylabel y5">£80k</div><svg viewBox="0 0 400 220" preserveAspectRatio="none">
+      <polyline fill="none" stroke="#52e28d" stroke-width="4" points="0,150 133,157 266,90 400,48"/>
+      <polyline fill="none" stroke="#58bff7" stroke-width="4" points="0,150 133,184 266,163 400,126"/>
+      <polyline fill="none" stroke="#ff7f8d" stroke-width="4" points="0,150 133,161 266,191 400,178"/>
+      <g fill="#52e28d"><circle cx="0" cy="150" r="6"/><circle cx="133" cy="157" r="6"/><circle cx="266" cy="90" r="6"/><circle cx="400" cy="48" r="6"/></g>
+      <g fill="#58bff7"><circle cx="0" cy="150" r="6"/><circle cx="133" cy="184" r="6"/><circle cx="266" cy="163" r="6"/><circle cx="400" cy="126" r="6"/></g>
+      <g fill="#ff7f8d"><circle cx="0" cy="150" r="6"/><circle cx="133" cy="161" r="6"/><circle cx="266" cy="191" r="6"/><circle cx="400" cy="178" r="6"/></g>
+    </svg><div class="xlabels"><span>Jan 2026<br>(Start)</span><span>Mar 2026<br>(Q1)</span><span>Jun 2026<br>(Q2)</span><span>Sep 2026<br>(Now)</span></div></div></div>
+    <div class="side"><div class="card side-card"><div class="section-title">BIGGEST WINNER</div><div class="winner"><div class="rocket">🚀</div><div><div class="winner-main">SK Hynix (Lee)</div><div style="font-size:18px">£33.3k → £72.8k</div><div class="winner-big">+118.4%</div></div></div></div><div class="card side-card"><div class="section-title">CHECKPOINT WINNERS</div><div class="checkpoints"><div class="cp"><div class="q">Q1</div><div class="date">31 Mar</div><div class="who old">Michael</div></div><div class="cp"><div class="q">Q2</div><div class="date">30 Jun</div><div class="who lead">Lee</div></div><div class="cp"><div class="q">Now</div><div class="date">11 Sep</div><div class="who lead">Lee</div></div></div></div></div>
+  </div>
+
+  <div class="footer"><div class="rules"><span>£100,000 starting capital each</span><span>No trading (buy and hold)</span><span>Dividends ignored</span><span>Values in GBP (FX adjusted)</span></div><div class="signoff">On to Q3!</div></div>
+</div>
+<script>
+// Easy-edit data block for future refreshes.
+// Replace values here, then mirror them in the HTML above if you want a quick manual workflow.
+const scorecardData = {
+  asOf: '11 Sep 2026',
+  players: [
+    { name:'Lee', value:132346, ret:32.3 },
+    { name:'Roger', value:110615, ret:10.6 },
+    { name:'Michael', value:95495, ret:-4.5 }
+  ]
+};
+</script>
+</body>
+</html>

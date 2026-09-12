@@ -1,0 +1,18 @@
+{
+  "game": {
+    "title": "Family Stock Challenge",
+    "reportingCurrency": "GBP",
+    "startingCapital": 100000,
+    "rules": [
+      "£100,000 starting capital each",
+      "Trading at quarterly checkpoints",
+      "Dividends ignored",
+      "Values in GBP (FX adjusted)"
+    ]
+  },
+  "chart": {
+    "min": 80000,
+    "max": 160000,
+    "barMax": 150000
+  }
+}
