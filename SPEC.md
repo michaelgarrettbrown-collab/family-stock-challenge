@@ -2,21 +2,21 @@
 
 ## Purpose
 
-Evolve the scorecard into a quarterly trading game that preserves both financial history and the reasoning behind each player’s decisions. ChatGPT/Codex is the primary administration interface.
+Maintain a reproducible public scorecard for the Family Stock Challenge. Financial data is version-controlled in Git; human reasoning is kept separately in Notion. ChatGPT/Codex is the primary administration interface.
 
 ## Architecture
 
 ```text
-Conversation → validated ledger change → calculated public JSON → website
-                         ↓
-                 Git version history
+Approved data change → validated ledger → calculated public JSON → website
+                              ↓
+                      Git version history
 
 Notion → lightweight player context and appended notes
 ```
 
 ### Responsibilities
 
-- **Local JSON ledger:** authoritative record of players, instruments, trades, cash, positions and checkpoint valuations.
+- **Local JSON ledger:** authoritative record of players, instruments, opening purchases, prices, cash and checkpoint valuations.
 - **Calculation code:** validates transactions and derives holdings, returns, rankings and quarter-on-quarter changes.
 - **Public JSON:** complete public financial game record needed by ChatGPT and the website. Fields may exist without being displayed.
 - **Website:** selective presentation of current standings, holdings, history and recent changes.
@@ -37,35 +37,34 @@ Keep one page per player in a single table:
 
 Notes may capture reflections, conversations, thesis changes and trade ideas. Clearly distinguish an idea from an agreed trade.
 
-## Ledger model
+## Financial ledger
 
-The source ledger must contain:
+`data/game-ledger.json` contains:
 
 - Players and starting capital
 - Instruments with company, MIC-qualified ticker, exchange and currency
-- Append-only buy/sell transactions with date, quarter, quantity, execution price, FX rate and fees
+- Opening purchase transactions with date, quantity, execution price, FX rate and fees
 - Cash movements and balances
 - Immutable quarter-end portfolio and position snapshots
 - Schema and calculation versions
 
 Corrections use explicit reversal/replacement entries; historical transactions are not silently edited.
 
-## Quarterly workflow
+## Current update workflow
 
-1. Close the quarter using the agreed prices and FX rates.
-2. Save immutable valuation and position snapshots.
-3. Record each approved trade through balanced ledger entries.
-4. Reconstruct positions and cash from the transaction history.
-5. Validate tickers, ownership, quantities, dates, currencies and portfolio totals.
-6. Calculate standings and changes from the previous checkpoint.
-7. Preview the dashboard and obtain approval.
-8. Generate `public/scorecard-data.json`, commit and push it.
-9. GitHub Pages republishes the static site.
-10. Update each player’s Notion summary and append relevant commentary.
+1. Update approved prices, FX rates or checkpoint values in the ledger.
+2. Validate tickers, quantities, dates, currencies, cash and portfolio totals.
+3. Calculate standings and changes from the previous checkpoint.
+4. Preview the dashboard and obtain approval.
+5. Generate `public/scorecard-data.json`, commit and push it.
+6. GitHub Pages republishes the static site.
+7. Update each player’s Notion summary and append relevant commentary when needed.
 
-## Conversational trade control
+## Future quarterly trading
 
-For a request such as “Lee sold X and bought Y,” ChatGPT/Codex must show a confirmation preview before changing the ledger. It should resolve the exact instruments and show quantities, prices, FX, fees, proceeds, cost and resulting cash. Proposed or ambiguous trades are not recorded as completed trades.
+Quarterly trading is **not currently enabled**. The ledger can represent BUY and SELL transactions, but no post-opening trade may be recorded until the game rules are explicitly agreed.
+
+When enabled, ChatGPT/Codex must show a confirmation preview before changing the ledger. It must resolve the exact instruments and show quantities, prices, FX, fees, proceeds, cost and resulting cash. Proposed or ambiguous trades are not completed trades.
 
 ## Public output
 
@@ -88,21 +87,20 @@ The page may show only a subset. Notion content—including original theses, pla
 - The live site changes only after a reviewed commit is pushed.
 - A bad publication is restored by reverting to a known-good commit and republishing.
 
-## Adopted initial trading rules
+## Trading decisions still required
 
-- Trades execute at quarterly checkpoints using explicitly recorded prices and FX rates.
-- Fractional shares and uninvested cash are allowed.
-- Initial fees are zero and dividends are excluded.
-- Short selling, deposits and withdrawals are not allowed.
-- Ties share a rank and are then displayed alphabetically.
-- Corrections use explicit reversal and replacement entries.
-- Corporate actions require an explicit ledger entry before publication.
+- Execution timing and price source
+- Fractional-share and cash policy
+- Fees, dividends and corporate actions
+- FX source and fixing date
+- Short selling, deposits and withdrawals
+- Tie-breaking and correction rules
 
 ## Acceptance criteria
 
 - Every published figure can be reproduced from the ledger.
-- Positions and cash balance after every transaction.
-- Previous checkpoints remain unchanged after later trades.
+- Opening positions and cash balance from the ledger.
+- Previous checkpoints remain unchanged after later updates.
 - Quarter-on-quarter changes are generated automatically.
 - No Notion dependency is required to calculate or publish the game.
 - A failed validation cannot overwrite the published scorecard.
