@@ -1,0 +1,14 @@
+{
+  "source": "Yahoo Finance",
+  "instruments": [
+    { "instrumentId": "experian", "ledgerTicker": "XLON:EXPN", "yahooTicker": "EXPN.L", "exchange": "LSE", "currency": "GBP" },
+    { "instrumentId": "astrazeneca", "ledgerTicker": "XLON:AZN", "yahooTicker": "AZN.L", "exchange": "LSE", "currency": "GBP" },
+    { "instrumentId": "unilever", "ledgerTicker": "XLON:ULVR", "yahooTicker": "ULVR.L", "exchange": "LSE", "currency": "GBP" },
+    { "instrumentId": "rheinmetall", "ledgerTicker": "XETR:RHM", "yahooTicker": "RHM.DE", "exchange": "Xetra", "currency": "EUR" },
+    { "instrumentId": "servicenow", "ledgerTicker": "XNYS:NOW", "yahooTicker": "NOW", "exchange": "NYSE", "currency": "USD" },
+    { "instrumentId": "andrada", "ledgerTicker": "XLON:ATM", "yahooTicker": "ATM.L", "exchange": "LSE", "currency": "GBP" },
+    { "instrumentId": "charter", "ledgerTicker": "XNAS:CHTR", "yahooTicker": "CHTR", "exchange": "NASDAQ", "currency": "USD" },
+    { "instrumentId": "sk-hynix", "ledgerTicker": "XKRX:000660", "yahooTicker": "000660.KS", "exchange": "KRX", "currency": "KRW" },
+    { "instrumentId": "chevron", "ledgerTicker": "XNYS:CVX", "yahooTicker": "CVX", "exchange": "NYSE", "currency": "USD" }
+  ]
+}

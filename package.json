@@ -6,7 +6,15 @@
   "scripts": {
     "build": "node src/cli.js build",
     "preview": "node src/cli.js preview",
+    "weekly-update": "node src/cli.js weekly-update",
+    "weekly-dry-run": "node src/cli.js weekly-dry-run",
+    "weekly-email-test": "node src/cli.js weekly-email-test",
+    "weekly-rehearsal": "node src/cli.js weekly-rehearsal",
+    "weekly-first-live": "node src/cli.js weekly-first-live",
     "serve": "node src/server.js",
     "test": "node --test"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.13"
   }
 }

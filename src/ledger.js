@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
-export async function readLedger(path = 'data/game-ledger.json') { return JSON.parse(await readFile(path, 'utf8')); }
+export async function readLedger(path = process.env.LEDGER_PATH || 'data/game-ledger.json') { return JSON.parse(await readFile(path, 'utf8')); }
 
 export function reconstructPortfolio(ledger, playerId) {
   const player = ledger.players.find(item => item.id === playerId);

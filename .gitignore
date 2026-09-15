@@ -1,4 +1,6 @@
 .env
+.env.*
+!.env.example
 data/notion-current.json
 output/
 node_modules/

@@ -13,5 +13,18 @@ export function validateLedger(ledger) {
   }
   for(const instrument of ledger.instruments){ if(!/^[A-Z0-9]{4}:.+/.test(instrument.ticker)) errors.push(`${instrument.name}: ticker must include a MIC prefix.`); if(!priceIds.has(instrument.id)) warnings.push(`${instrument.name}: no current valuation price.`); }
   for(const point of ledger.checkpoints) for(const id of playerIds) if(!Number.isFinite(point.values[id])) errors.push(`${point.label}: missing value for ${id}.`);
+  const snapshots=ledger.valuations.snapshots||[];
+  for(const snapshot of snapshots){
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(snapshot.date||'')) errors.push('Weekly snapshot: date must be an ISO date.');
+    const snapshotPrices=new Map((snapshot.prices||[]).map(item=>[item.instrumentId,item]));
+    for(const instrument of ledger.instruments){
+      const quote=snapshotPrices.get(instrument.id);
+      if(!quote) { errors.push(`Weekly snapshot ${snapshot.date}: missing ${instrument.id} quote.`); continue; }
+      if(!(Number(quote.price)>0) || !(Number(quote.fxToGbp)>0)) errors.push(`Weekly snapshot ${snapshot.date}: invalid ${instrument.id} price or FX rate.`);
+      if(!quote.priceDate || !quote.fxDate || !quote.priceSource?.name || !quote.priceSource?.url || !quote.fxSource?.name || !quote.fxSource?.url) errors.push(`Weekly snapshot ${snapshot.date}: incomplete source record for ${instrument.id}.`);
+    }
+    for(const id of playerIds) if(!Number.isFinite(snapshot.playerValues?.[id])) errors.push(`Weekly snapshot ${snapshot.date}: missing ${id} portfolio value.`);
+  }
+  if(snapshots.length && snapshots.at(-1).date!==ledger.valuations.date) errors.push('Current valuation must match the latest weekly snapshot date.');
   return {errors,warnings};
 }

@@ -14,5 +14,10 @@
     "min": 80000,
     "max": 160000,
     "barMax": 150000
+  },
+  "weeklyUpdate": {
+    "approvedPriceSources": ["Yahoo Finance"],
+    "approvedFxSources": ["ECB"],
+    "plausibilityMaxChangePercent": 90
   }
 }

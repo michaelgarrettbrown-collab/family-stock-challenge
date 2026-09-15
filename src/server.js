@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 
 const port = Number(process.env.PORT || 8766);
-const root = normalize(join(process.cwd(), 'public'));
+const root = normalize(join(process.cwd(), process.argv[2] || 'public'));
 const types = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json; charset=utf-8' };
 
 createServer(async (request, response) => {
