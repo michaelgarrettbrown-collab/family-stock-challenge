@@ -3,7 +3,7 @@
   "calculationVersion": "1.0.0",
   "title": "Family Stock Challenge",
   "year": 2026,
-  "asOf": "2026-09-11",
+  "asOf": "2026-09-14",
   "reportingCurrency": "GBP",
   "rules": [
     "£100,000 starting capital each",
@@ -29,9 +29,9 @@
     {
       "id": "lee",
       "name": "Lee",
-      "value": 132345.90030077196,
+      "value": 127208.26582112136,
       "cash": 0,
-      "return": 32.34590030077196,
+      "return": 27.208265821121348,
       "startValue": 100000,
       "holdings": [
         {
@@ -40,9 +40,9 @@
           "ticker": "XETR:RHM",
           "currency": "EUR",
           "quantity": 21.68625293325576,
-          "value": 18461.976412594104,
+          "value": 18488.296553693384,
           "costBasis": 33333.33,
-          "return": -44.61406522362421,
+          "return": -44.535104792430324,
           "startValue": 33333.33
         },
         {
@@ -51,9 +51,9 @@
           "ticker": "XKRX:000660",
           "currency": "KRW",
           "quantity": 72.84803451937624,
-          "value": 72801.38817452067,
+          "value": 67973.42781278542,
           "costBasis": 33333.33,
-          "return": 118.40418636398064,
+          "return": 103.92030383038664,
           "startValue": 33333.33
         },
         {
@@ -62,9 +62,9 @@
           "ticker": "XNYS:CVX",
           "currency": "USD",
           "quantity": 259.28216214784,
-          "value": 41082.53571365718,
+          "value": 40746.54145464256,
           "costBasis": 33333.34,
-          "return": 23.24758249145504,
+          "return": 22.239599916007702,
           "startValue": 33333.34
         }
       ],
@@ -88,9 +88,9 @@
     {
       "id": "roger",
       "name": "Roger",
-      "value": 105484.21445471558,
+      "value": 108305.06541336399,
       "cash": 0,
-      "return": 5.484214454715586,
+      "return": 8.305065413363998,
       "startValue": 100000,
       "holdings": [
         {
@@ -99,9 +99,9 @@
           "ticker": "XLON:AZN",
           "currency": "GBP",
           "quantity": 245.09801470588238,
-          "value": 28696.07556176471,
+          "value": 29789.212707352945,
           "costBasis": 33333.33,
-          "return": -13.911764705882346,
+          "return": -10.632352941176471,
           "startValue": 33333.33
         },
         {
@@ -110,9 +110,9 @@
           "ticker": "XLON:ULVR",
           "currency": "GBP",
           "quantity": 674.69547616638,
-          "value": 30708.764597712787,
+          "value": 31690.446515534866,
           "costBasis": 33333.33,
-          "return": -7.873696994231338,
+          "return": -4.928650946260504,
           "startValue": 33333.33
         },
         {
@@ -121,9 +121,9 @@
           "ticker": "XLON:ATM",
           "currency": "GBP",
           "quantity": 793650.9523809522,
-          "value": 46079.374295238085,
+          "value": 46825.40619047618,
           "costBasis": 33333.34,
-          "return": 38.23809523809523,
+          "return": 40.476190476190446,
           "startValue": 33333.34
         }
       ],
@@ -147,9 +147,9 @@
     {
       "id": "michael",
       "name": "Michael",
-      "value": 95495.4027413338,
+      "value": 99499.47303981034,
       "cash": 0,
-      "return": -4.504597258666198,
+      "return": -0.5005269601896623,
       "startValue": 100000,
       "holdings": [
         {
@@ -158,9 +158,9 @@
           "ticker": "XLON:EXPN",
           "currency": "GBP",
           "quantity": 1208.605511240029,
-          "value": 33031.18862218999,
+          "value": 34541.945511240025,
           "costBasis": 33333.34,
-          "return": -0.9064539521392301,
+          "return": 3.6258158085569203,
           "startValue": 33333.34
         },
         {
@@ -169,9 +169,9 @@
           "ticker": "XNYS:NOW",
           "currency": "USD",
           "quantity": 391.99214361038634,
-          "value": 38453.92205034506,
+          "value": 41330.33927178154,
           "costBasis": 33333.33,
-          "return": 15.361777687212964,
+          "return": 23.99103021444762,
           "startValue": 33333.33
         },
         {
@@ -180,9 +180,9 @@
           "ticker": "XNAS:CHTR",
           "currency": "USD",
           "quantity": 222.5257166885858,
-          "value": 24010.29206879875,
+          "value": 23627.188256788784,
           "costBasis": 33333.33,
-          "return": -27.96911659051541,
+          "return": -29.11842814147646,
           "startValue": 33333.33
         }
       ],
@@ -219,7 +219,7 @@
     },
     {
       "label": "Now",
-      "date": "2026-09-11"
+      "date": "2026-09-14"
     }
   ],
   "checkpointLeaders": [
@@ -236,7 +236,7 @@
     {
       "label": "Now",
       "name": "Lee",
-      "date": "11 Sept"
+      "date": "14 Sept"
     }
   ],
   "biggestWinner": {
@@ -245,9 +245,9 @@
     "ticker": "XKRX:000660",
     "currency": "KRW",
     "quantity": 72.84803451937624,
-    "value": 72801.38817452067,
+    "value": 67973.42781278542,
     "costBasis": 33333.33,
-    "return": 118.40418636398064,
+    "return": 103.92030383038664,
     "startValue": 33333.33,
     "player": "Lee"
   },
@@ -386,22 +386,22 @@
       "playerId": "lee",
       "player": "Lee",
       "previousValue": 144924.57,
-      "currentValue": 132345.90030077196,
-      "change": -12578.669699228049
+      "currentValue": 127208.26582112136,
+      "change": -17716.30417887865
     },
     {
       "playerId": "roger",
       "player": "Roger",
       "previousValue": 96034.43,
-      "currentValue": 105484.21445471558,
-      "change": 9449.784454715584
+      "currentValue": 108305.06541336399,
+      "change": 12270.635413363998
     },
     {
       "playerId": "michael",
       "player": "Michael",
       "previousValue": 83988.25,
-      "currentValue": 95495.4027413338,
-      "change": 11507.152741333804
+      "currentValue": 99499.47303981034,
+      "change": 15511.223039810342
     }
   ],
   "warnings": []

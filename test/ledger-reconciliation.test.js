@@ -8,7 +8,7 @@ test('version-controlled ledger reproduces the approved scorecard', async () => 
   const config=JSON.parse(await readFile('config/scorecard.config.json','utf8'));
   const ledger=await readLedger(), result=buildScorecardData(ledger,config);
   assert.deepEqual(result.players.map(p=>({rank:p.rank,name:p.name,value:Math.round(p.value),return:Number(p.return.toFixed(1))})),[
-    {rank:1,name:'Lee',value:132346,return:32.3}, {rank:2,name:'Roger',value:105484,return:5.5}, {rank:3,name:'Michael',value:95495,return:-4.5}
+    {rank:1,name:'Lee',value:127208,return:27.2}, {rank:2,name:'Roger',value:108305,return:8.3}, {rank:3,name:'Michael',value:99499,return:-0.5}
   ]);
   for(const player of ledger.players) assert.ok(Math.abs(reconstructPortfolio(ledger,player.id).cash)<0.01);
   assert.equal(result.biggestWinner.name,'SK Hynix');
