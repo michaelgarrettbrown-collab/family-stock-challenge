@@ -11,6 +11,7 @@
     "weekly-email-test": "node src/cli.js weekly-email-test",
     "weekly-rehearsal": "node src/cli.js weekly-rehearsal",
     "weekly-first-live": "node src/cli.js weekly-first-live",
+    "github-connectivity-check": "node src/cli.js github-connectivity-check",
     "serve": "node src/server.js",
     "test": "node --test"
   },

@@ -11,7 +11,15 @@ export async function runWeeklyUpdate(options = {}) {
   const runDirectory = `output/weekly-runs/${valuationDate}-${Date.now()}`;
   await mkdir(runDirectory, { recursive: true });
   try { return await performWeeklyUpdate({ ...options, valuationDate, runDirectory }, () => { pushed = true; }); }
-  catch (error) { await writeFile(`${runDirectory}/failure.txt`, `${error.message}\n`); if (!pushed && !options.dryRun) await failureEmail(error.message); throw error; }
+  catch (error) {
+    let message = error.message;
+    await writeFile(`${runDirectory}/failure.txt`, `${message}\n`);
+    if (!pushed && !options.dryRun) {
+      try { await failureEmail(message); }
+      catch (emailError) { message += `\nFailure-email attempt also failed: ${emailError.message}`; await writeFile(`${runDirectory}/failure.txt`, `${message}\n`); }
+    }
+    throw new Error(message);
+  }
 }
 
 async function performWeeklyUpdate({ date, valuationDate, runDirectory, dryRun = false, emailTest = false, rehearsal = false, firstLive = false, confirmed = false, branch, fetchImpl = fetch } = {}, markPushed) {
@@ -27,22 +35,22 @@ async function performWeeklyUpdate({ date, valuationDate, runDirectory, dryRun =
   if (rehearsal) return rehearse(prepared, valuationDate, runDirectory, branch);
   if (firstLive && !confirmed) throw new Error('First live run is a real publication to main and GitHub Pages. Re-run only after Michael explicitly confirms with --confirm-live-publication.');
   const mail = await gmail(); await verifyGmail(mail);
-  const oldLedger = await readFile('data/game-ledger.json', 'utf8'); const oldPublic = await readFile('public/scorecard-data.json', 'utf8');
   let pushed = false;
   try {
     await writeFile('data/game-ledger.json', `${JSON.stringify(prepared.candidateLedger, null, 2)}\n`);
     await copyFile(`${runDirectory}/public/scorecard-data.json`, 'public/scorecard-data.json');
     await run('git', ['commit', '--only', '-m', `Publish weekly scorecard ${valuationDate}`, '--', 'data/game-ledger.json', 'public/scorecard-data.json']);
     const commit = (await capture('git', ['rev-parse', 'HEAD'])).trim();
-    await run('git', ['push', 'origin', 'main']);
+    try { await run('git', ['push', 'origin', 'main']); }
+    catch (pushError) {
+      await writeFile(`${runDirectory}/push-failure.json`, `${JSON.stringify({ stage: 'git push', exitCode: pushError.exitCode, stderr: pushError.stderr, message: pushError.message }, null, 2)}\n`);
+      throw pushError;
+    }
     pushed = true; markPushed();
     try { await sendWithRetry(mail, 'Family Stock Challenge — weekly update published', formatWeeklyEmail(prepared.whatsappMessage, true)); }
     catch (error) { await writeFile(`${runDirectory}/notification-failure.txt`, `${error.message}\n`); throw new Error(`Published ${commit}, but Gmail notification failed: ${error.message}`); }
     return { mode: 'production', valuationDate, wrote: true, commit, site: 'https://michaelgarrettbrown-collab.github.io/family-stock-challenge/' };
-  } catch (error) {
-    if (!pushed) await Promise.all([writeFile('data/game-ledger.json', oldLedger), writeFile('public/scorecard-data.json', oldPublic)]);
-    throw error;
-  }
+  } catch (error) { throw error; }
 }
 
 async function rehearse(prepared, valuationDate, runDirectory, branch) {
@@ -66,11 +74,16 @@ async function preflight(candidateLedger, directory) {
   await run('npm', ['test'], environment); await run('npm', ['run', 'build'], environment);
 }
 async function gmail() { const local = await readFile('.env', 'utf8').catch(() => ''); return emailConfig({ ...process.env, ...loadEnv(local) }); }
-async function failureEmail(message) { try { await sendGmail(await gmail(), 'Family Stock Challenge — weekly update failed', `The weekly update could not be completed.\n\n${message}`); } catch {} }
+async function failureEmail(message) { await sendGmail(await gmail(), 'Family Stock Challenge — weekly update failed', `The weekly update could not be completed.\n\n${message}`); }
 export async function sendWithRetry(mail, subject, text, send = sendGmail) { try { await send(mail, subject, text); } catch (firstError) { try { await send(mail, subject, text); } catch { throw firstError; } } }
 function priorThursday() { const local = localDate(); local.setUTCDate(local.getUTCDate() - 1); return local.toISOString().slice(0, 10); }
 function isFridayInMadrid() { return localDate().getUTCDay() === 5; }
 function localDate() { const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(); const get = type => parts.find(part => part.type === type).value; return new Date(Date.UTC(get('year'), Number(get('month')) - 1, get('day'))); }
 async function json(path) { return JSON.parse(await readFile(path, 'utf8')); }
-function run(command, args, env = {}, cwd) { return new Promise((resolve, reject) => { const child = spawn(command, args, { stdio: 'inherit', cwd, env: { ...process.env, ...env } }); child.on('error', reject); child.on('exit', code => code === 0 ? resolve() : reject(new Error(`${command} ${args.join(' ')} failed.`))); }); }
+export async function checkGitHubConnectivity() { await run('git', ['ls-remote', '--exit-code', 'origin', 'refs/heads/main']); return { mode: 'github-connectivity-check', reachable: true }; }
+function run(command, args, env = {}, cwd) { return new Promise((resolve, reject) => {
+  const child = spawn(command, args, { cwd, env: { ...process.env, ...env } }); let stderr = '';
+  child.stdout.on('data', chunk => process.stdout.write(chunk)); child.stderr.on('data', chunk => { stderr += chunk; process.stderr.write(chunk); });
+  child.on('error', reject); child.on('exit', code => { if (code === 0) resolve(); else { const error = new Error(`${command} ${args.join(' ')} failed with exit code ${code}.`); error.exitCode = code; error.stderr = stderr; reject(error); } });
+}); }
 function capture(command, args, cwd) { return new Promise((resolve, reject) => { const child = spawn(command, args, { cwd }); let output = ''; child.stdout.on('data', chunk => { output += chunk; }); child.on('error', reject); child.on('exit', code => code === 0 ? resolve(output) : reject(new Error(`${command} ${args.join(' ')} failed.`))); }); }

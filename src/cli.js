@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { readLedger } from './ledger.js';
 import { buildScorecardData } from './build-scorecard-data.js';
-import { runWeeklyUpdate } from './automatic-weekly-update.js';
+import { checkGitHubConnectivity, runWeeklyUpdate } from './automatic-weekly-update.js';
 
 const [command = 'build', ...args] = process.argv.slice(2);
 const config = JSON.parse(await readFile('config/scorecard.config.json', 'utf8'));
@@ -12,6 +12,7 @@ else if (command === 'weekly-dry-run') await automaticUpdate(true);
 else if (command === 'weekly-email-test') await automaticUpdate(false, true);
 else if (command === 'weekly-rehearsal') await automaticUpdate(false, false, true);
 else if (command === 'weekly-first-live') await automaticUpdate(false, false, false, true);
+else if (command === 'github-connectivity-check') console.log(JSON.stringify(await checkGitHubConnectivity(), null, 2));
 else if (['build', 'preview'].includes(command)) await buildCurrent();
 else throw new Error(`Unknown command: ${command}`);
 

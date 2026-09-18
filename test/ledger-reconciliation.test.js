@@ -51,7 +51,7 @@ test('a complete Thursday valuation prepares a reproducible first weekly snapsho
   } else {
     assert.ok(prepared.approvalSummary.portfolioChanges.every(change => Number.isFinite(change.change)));
   }
-  assert.match(prepared.whatsappMessage, /Week 38/);
+  assert.match(prepared.whatsappMessage, new RegExp(`Week ${isoWeek(valuationDate)}`));
 });
 
 test('weekly preparation rejects an incomplete or unapproved price run without changing the ledger', async () => {
@@ -88,6 +88,13 @@ function nextThursday(isoDate) {
   const days = (4 - date.getUTCDay() + 7) % 7 || 7;
   date.setUTCDate(date.getUTCDate() + days);
   return date.toISOString().slice(0, 10);
+}
+
+function isoWeek(isoDate) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + 4 - (date.getUTCDay() || 7));
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+  return Math.ceil(((date - yearStart) / 86_400_000 + 1) / 7);
 }
 
 test('Yahoo Close collection converts LSE pence and uses ECB FX cross rates', async () => {
