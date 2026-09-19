@@ -8,10 +8,10 @@ It is not investment advice, real-money portfolio management or a financial-data
 
 ## Current operational status
 
-- **Live dashboard:** valued through 14 September 2026.
+- **Live dashboard:** valued through 17 September 2026.
 - **Email-only test:** passed using historical 10 September 2026 data; no live data was changed.
 - **Friday 08:05 schedule:** configured in Codex for Europe/Madrid, but currently **paused**.
-- **First live automatic publication:** not yet performed.
+- **First manual live publication:** succeeded on 17 September 2026; Michael confirmed Gmail delivery.
 - **Quarterly trading:** not enabled. No post-opening trade should be added without agreeing the rules first.
 
 ## System map
@@ -64,11 +64,11 @@ For every instrument, the workflow:
 
 When a production run succeeds, it updates the ledger and public scorecard data, commits only those permitted data files, pushes `main`, and GitHub Pages refreshes the dashboard. It then emails Michael a WhatsApp-ready family summary. If a required collection, validation, test, build, Git or pre-publication email check fails, it does not publish a partial update.
 
-The Friday schedule is paused until the first manually triggered live publication has succeeded.
+The first manual live publication succeeded on 17 September 2026 and Gmail delivery was confirmed by Michael. The Friday schedule remains paused pending this cleanup and review.
 
 ## Known limitations and inconsistencies
 
-- The Friday 08:05 schedule is configured outside this repository and remains paused; no automatic production run has occurred yet.
+- The Friday 08:05 schedule is configured outside this repository and remains paused pending cleanup and review; no automatic production run has occurred.
 - Yahoo Finance is a convenient public source, not an official exchange feed. The collector cannot independently prove that a returned daily row is the exchange's official close.
 - The existing configuration still contains the legacy text `Trading at quarterly checkpoints`, although quarterly trading is not enabled. The text is not used to execute trades and should be corrected in a future configuration/documentation update.
 
@@ -93,6 +93,7 @@ The Friday schedule is paused until the first manually triggered live publicatio
 - `npm run weekly-dry-run -- --date YYYY-MM-DD` — retrieve a past Thursday's data, validate and build locally. It does not send email, commit, push or change the dashboard.
 - `npm run weekly-email-test -- --date YYYY-MM-DD` — run the same candidate checks and send one clearly labelled test email. It does not commit, push or change the dashboard.
 - `npm run weekly-rehearsal -- --date YYYY-MM-DD --branch weekly-rehearsal` — perform the publication path only on a named non-`main` test branch from a temporary worktree. It does not update GitHub Pages.
+- `npm run github-connectivity-check` — perform a read-only `git ls-remote` check for `origin/main`; it does not change Git, data or the site.
 
 ### Live publication
 
@@ -111,5 +112,5 @@ The dashboard is a static site hosted on GitHub Pages:
 
 ## Further documentation
 
-- [`SPEC.md`](SPEC.md) describes the long-lived system architecture and game boundaries.
+- [`spec.md`](spec.md) records the latest completed change and its remaining limitation.
 - [`intent.md`](intent.md) is the concise product decision behind that workflow.
