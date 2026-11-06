@@ -3,7 +3,7 @@
   "calculationVersion": "1.0.0",
   "title": "Family Stock Challenge",
   "year": 2026,
-  "asOf": "2026-10-08",
+  "asOf": "2026-11-05",
   "reportingCurrency": "GBP",
   "rules": [
     "£100,000 starting capital each",
@@ -27,70 +27,11 @@
   },
   "players": [
     {
-      "id": "lee",
-      "name": "Lee",
-      "value": 127562.0780267223,
-      "cash": 0,
-      "return": 27.562078026722304,
-      "startValue": 100000,
-      "holdings": [
-        {
-          "name": "Rheinmetall",
-          "fullName": "Rheinmetall",
-          "ticker": "XETR:RHM",
-          "currency": "EUR",
-          "quantity": 21.68625293325576,
-          "value": 17012.277432431165,
-          "costBasis": 33333.33,
-          "return": -48.963162599022766,
-          "startValue": 33333.33
-        },
-        {
-          "name": "SK Hynix",
-          "fullName": "SK Hynix",
-          "ticker": "XKRX:000660",
-          "currency": "KRW",
-          "quantity": 72.84803451937624,
-          "value": 69017.68865510749,
-          "costBasis": 33333.33,
-          "return": 107.05308667063109,
-          "startValue": 33333.33
-        },
-        {
-          "name": "Chevron",
-          "fullName": "Chevron",
-          "ticker": "XNYS:CVX",
-          "currency": "USD",
-          "quantity": 259.28216214784,
-          "value": 41532.11193918365,
-          "costBasis": 33333.34,
-          "return": 24.596310898288777,
-          "startValue": 33333.34
-        }
-      ],
-      "checkpoints": [
-        {
-          "label": "Start",
-          "value": 100000
-        },
-        {
-          "label": "Q1",
-          "value": 97392.3
-        },
-        {
-          "label": "Q2",
-          "value": 144924.57
-        }
-      ],
-      "rank": 1,
-      "color": "green"
-    },
-    {
       "id": "roger",
       "name": "Roger",
-      "value": 116599.67672101487,
+      "value": 112811.79216214104,
       "cash": 0,
-      "return": 16.599676721014877,
+      "return": 12.811792162141034,
       "startValue": 100000,
       "holdings": [
         {
@@ -99,9 +40,9 @@
           "ticker": "XLON:AZN",
           "currency": "GBP",
           "quantity": 245.09801470588238,
-          "value": 29852.938191176472,
+          "value": 34416.663225000004,
           "costBasis": 33333.33,
-          "return": -10.441176470588232,
+          "return": 3.2499999999999973,
           "startValue": 33333.33
         },
         {
@@ -110,9 +51,9 @@
           "ticker": "XLON:ULVR",
           "currency": "GBP",
           "quantity": 674.69547616638,
-          "value": 31191.171863171745,
+          "value": 33950.67636069224,
           "costBasis": 33333.33,
-          "return": -6.4264750531322745,
+          "return": 1.8520392672806363,
           "startValue": 33333.33
         },
         {
@@ -121,9 +62,9 @@
           "ticker": "XLON:ATM",
           "currency": "GBP",
           "quantity": 793650.9523809522,
-          "value": 55555.56666666666,
+          "value": 44444.45257644879,
           "costBasis": 33333.34,
-          "return": 66.66666666666666,
+          "return": 33.33333106268017,
           "startValue": 33333.34
         }
       ],
@@ -141,15 +82,74 @@
           "value": 96034.43
         }
       ],
+      "rank": 1,
+      "color": "green"
+    },
+    {
+      "id": "lee",
+      "name": "Lee",
+      "value": 107115.34783712766,
+      "cash": 0,
+      "return": 7.115347837127661,
+      "startValue": 100000,
+      "holdings": [
+        {
+          "name": "Rheinmetall",
+          "fullName": "Rheinmetall",
+          "ticker": "XETR:RHM",
+          "currency": "EUR",
+          "quantity": 21.68625293325576,
+          "value": 15218.373428612123,
+          "costBasis": 33333.33,
+          "return": -54.34487514865114,
+          "startValue": 33333.33
+        },
+        {
+          "name": "SK Hynix",
+          "fullName": "SK Hynix",
+          "ticker": "XKRX:000660",
+          "currency": "KRW",
+          "quantity": 72.84803451937624,
+          "value": 50877.37467097139,
+          "costBasis": 33333.33,
+          "return": 52.632139276128086,
+          "startValue": 33333.33
+        },
+        {
+          "name": "Chevron",
+          "fullName": "Chevron",
+          "ticker": "XNYS:CVX",
+          "currency": "USD",
+          "quantity": 259.28216214784,
+          "value": 41019.599737544144,
+          "costBasis": 33333.34,
+          "return": 23.05877460087753,
+          "startValue": 33333.34
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "Start",
+          "value": 100000
+        },
+        {
+          "label": "Q1",
+          "value": 97392.3
+        },
+        {
+          "label": "Q2",
+          "value": 144924.57
+        }
+      ],
       "rank": 2,
       "color": "blue"
     },
     {
       "id": "michael",
       "name": "Michael",
-      "value": 90692.25175950365,
+      "value": 88474.35570458572,
       "cash": 0,
-      "return": -9.30774824049635,
+      "return": -11.525644295414283,
       "startValue": 100000,
       "holdings": [
         {
@@ -158,9 +158,9 @@
           "ticker": "XLON:EXPN",
           "currency": "GBP",
           "quantity": 1208.605511240029,
-          "value": 30734.838150833937,
+          "value": 37853.52461203771,
           "costBasis": 33333.34,
-          "return": -7.795503988397378,
+          "return": 13.560551124002917,
           "startValue": 33333.34
         },
         {
@@ -169,9 +169,9 @@
           "ticker": "XNYS:NOW",
           "currency": "USD",
           "quantity": 391.99214361038634,
-          "value": 41478.92761922825,
+          "value": 29811.89494944654,
           "costBasis": 33333.33,
-          "return": 24.436795301364267,
+          "return": -10.564306208091,
           "startValue": 33333.33
         },
         {
@@ -180,9 +180,9 @@
           "ticker": "XNAS:CHTR",
           "currency": "USD",
           "quantity": 222.5257166885858,
-          "value": 18478.485989441448,
+          "value": 20808.93614310147,
           "costBasis": 33333.33,
-          "return": -44.56453648812931,
+          "return": -37.57318532801413,
           "startValue": 33333.33
         }
       ],
@@ -219,7 +219,7 @@
     },
     {
       "label": "Now",
-      "date": "2026-10-08"
+      "date": "2026-11-05"
     }
   ],
   "checkpointLeaders": [
@@ -235,8 +235,8 @@
     },
     {
       "label": "Now",
-      "name": "Lee",
-      "date": "8 Oct"
+      "name": "Roger",
+      "date": "5 Nov"
     }
   ],
   "biggestWinner": {
@@ -245,9 +245,9 @@
     "ticker": "XKRX:000660",
     "currency": "KRW",
     "quantity": 72.84803451937624,
-    "value": 69017.68865510749,
+    "value": 50877.37467097139,
     "costBasis": 33333.33,
-    "return": 107.05308667063109,
+    "return": 52.632139276128086,
     "startValue": 33333.33,
     "player": "Lee"
   },
@@ -383,25 +383,25 @@
   ],
   "changesSincePreviousCheckpoint": [
     {
-      "playerId": "lee",
-      "player": "Lee",
-      "previousValue": 144924.57,
-      "currentValue": 127562.0780267223,
-      "change": -17362.491973277705
-    },
-    {
       "playerId": "roger",
       "player": "Roger",
       "previousValue": 96034.43,
-      "currentValue": 116599.67672101487,
-      "change": 20565.246721014875
+      "currentValue": 112811.79216214104,
+      "change": 16777.362162141042
+    },
+    {
+      "playerId": "lee",
+      "player": "Lee",
+      "previousValue": 144924.57,
+      "currentValue": 107115.34783712766,
+      "change": -37809.22216287235
     },
     {
       "playerId": "michael",
       "player": "Michael",
       "previousValue": 83988.25,
-      "currentValue": 90692.25175950365,
-      "change": 6704.001759503648
+      "currentValue": 88474.35570458572,
+      "change": 4486.105704585716
     }
   ],
   "warnings": []
