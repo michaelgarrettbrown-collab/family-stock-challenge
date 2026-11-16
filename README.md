@@ -8,8 +8,8 @@ It is not investment advice, real-money portfolio management or a financial-data
 
 ## Current operational status
 
-- **Live dashboard:** valued through 5 November 2026.
-- **Manual production publications:** succeeded on 17 September, 24 September, 1 October, 8 October and 5 November 2026; Gmail sends completed without error.
+- **Live dashboard:** valued through 12 November 2026.
+- **Manual production publications:** succeeded on 17 September, 24 September, 1 October, 8 October, 5 November and 12 November 2026; Gmail sends completed without error.
 - **Friday 08:05 schedule:** intended to run in Codex for Europe/Madrid, but its present external configuration and reliability are unverified. Manual production runs remain the confirmed operating path.
 - **Quarterly trading:** not enabled. No post-opening trade should be added without agreeing the rules first.
 
@@ -63,7 +63,7 @@ For every instrument, the workflow:
 
 When a production run succeeds, it updates the ledger and public scorecard data, commits only those permitted data files, pushes `main`, and GitHub Pages refreshes the dashboard. It then emails Michael a WhatsApp-ready family summary. If a required collection, validation, test, build, Git or pre-publication email check fails, it does not publish a partial update.
 
-The first manual live publication succeeded on 17 September 2026 and Gmail delivery was confirmed by Michael. Subsequent manual production publications have succeeded through 5 November 2026. The external Friday schedule should be treated as unverified until its Scheduled run history has been checked after a successful unattended run.
+The first manual live publication succeeded on 17 September 2026 and Gmail delivery was confirmed by Michael. Subsequent manual production publications have succeeded through 12 November 2026. The external Friday schedule should be treated as unverified until its Scheduled run history has been checked after a successful unattended run.
 
 ## Known limitations and inconsistencies
 
