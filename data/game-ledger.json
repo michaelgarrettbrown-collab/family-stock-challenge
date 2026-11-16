@@ -209,150 +209,150 @@
     }
   ],
   "valuations": {
-    "date": "2026-11-05",
+    "date": "2026-11-12",
     "prices": [
       {
         "instrumentId": "experian",
-        "price": 31.32,
+        "price": 29.64,
         "fxToGbp": 1,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPN.L?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPN.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "astrazeneca",
-        "price": 140.42,
+        "price": 139.3,
         "fxToGbp": 1,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZN.L?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZN.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "unilever",
-        "price": 50.32,
+        "price": 49.285,
         "fxToGbp": 1,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ULVR.L?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ULVR.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "rheinmetall",
-        "price": 841.5,
-        "fxToGbp": 0.83393,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "price": 772.5999755859375,
+        "fxToGbp": 0.83595,
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "servicenow",
-        "price": 102.36000061035156,
-        "fxToGbp": 0.7429882394868139,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "price": 100.66000366210938,
+        "fxToGbp": 0.7543994224347982,
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "andrada",
-        "price": 0.05599999904632568,
+        "price": 0.05739999771118164,
         "fxToGbp": 1,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATM.L?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATM.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "charter",
-        "price": 125.86000061035156,
-        "fxToGbp": 0.7429882394868139,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "price": 132.66000366210938,
+        "fxToGbp": 0.7543994224347982,
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "sk-hynix",
-        "price": 1264000,
-        "fxToGbp": 0.0005525349835683239,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "price": 1254000,
+        "fxToGbp": 0.0005654729693165215,
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/000660.KS?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/000660.KS?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       },
       {
         "instrumentId": "chevron",
-        "price": 212.92999267578125,
-        "fxToGbp": 0.7429882394868139,
-        "priceDate": "2026-11-05",
-        "fxDate": "2026-11-05",
+        "price": 216.35000610351562,
+        "fxToGbp": 0.7543994224347982,
+        "priceDate": "2026-11-12",
+        "fxDate": "2026-11-12",
         "marketClosed": false,
         "priceSource": {
           "name": "Yahoo Finance",
-          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1793232000&period2=1793923200&interval=1d&events=history"
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1793836800&period2=1794528000&interval=1d&events=history"
         },
         "fxSource": {
           "name": "ECB",
-          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-05&endPeriod=2026-11-05&format=csvdata"
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
         }
       }
     ],
@@ -1187,6 +1187,171 @@
           "michael:XLON:EXPN": 37853.52461203771,
           "michael:XNYS:NOW": 29811.89494944654,
           "michael:XNAS:CHTR": 20808.93614310147
+        }
+      },
+      {
+        "date": "2026-11-12",
+        "prices": [
+          {
+            "instrumentId": "experian",
+            "price": 29.64,
+            "fxToGbp": 1,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPN.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "astrazeneca",
+            "price": 139.3,
+            "fxToGbp": 1,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZN.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "unilever",
+            "price": 49.285,
+            "fxToGbp": 1,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/ULVR.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "rheinmetall",
+            "price": 772.5999755859375,
+            "fxToGbp": 0.83595,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "servicenow",
+            "price": 100.66000366210938,
+            "fxToGbp": 0.7543994224347982,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "andrada",
+            "price": 0.05739999771118164,
+            "fxToGbp": 1,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATM.L?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "charter",
+            "price": 132.66000366210938,
+            "fxToGbp": 0.7543994224347982,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "sk-hynix",
+            "price": 1254000,
+            "fxToGbp": 0.0005654729693165215,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/000660.KS?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          },
+          {
+            "instrumentId": "chevron",
+            "price": 216.35000610351562,
+            "fxToGbp": 0.7543994224347982,
+            "priceDate": "2026-11-12",
+            "fxDate": "2026-11-12",
+            "marketClosed": false,
+            "priceSource": {
+              "name": "Yahoo Finance",
+              "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1793836800&period2=1794528000&interval=1d&events=history"
+            },
+            "fxSource": {
+              "name": "ECB",
+              "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-11-12&endPeriod=2026-11-12&format=csvdata"
+            }
+          }
+        ],
+        "playerValues": {
+          "roger": 112950.08284153324,
+          "lee": 107981.50285015014,
+          "michael": 87860.17631458068
+        },
+        "holdingValues": {
+          "roger:XLON:AZN": 34142.15344852942,
+          "roger:XLON:ULVR": 33252.366542860036,
+          "roger:XLON:ATM": 45555.56285014379,
+          "lee:XETR:RHM": 14006.17379502697,
+          "lee:XKRX:000660": 51656.76736323435,
+          "lee:XNYS:CVX": 42318.56169188882,
+          "michael:XLON:EXPN": 35823.06735315446,
+          "michael:XNYS:NOW": 29767.040063666933,
+          "michael:XNAS:CHTR": 22270.068897759284
         }
       }
     ]
