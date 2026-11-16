@@ -7,7 +7,7 @@
   "reportingCurrency": "GBP",
   "rules": [
     "£100,000 starting capital each",
-    "Trading at quarterly checkpoints",
+    "Opening picks held; no trading enabled",
     "Dividends ignored",
     "Values in GBP (FX adjusted)"
   ],
@@ -29,12 +29,16 @@
     {
       "id": "roger",
       "name": "Roger",
+      "publicThesis": "AstraZeneca and Unilever as established core holdings, plus a deliberately speculative Andrada Mining position.",
       "value": 112811.79216214104,
       "cash": 0,
       "return": 12.811792162141034,
       "startValue": 100000,
       "holdings": [
         {
+          "instrumentId": "astrazeneca",
+          "checkpointValue": 30098.036205882356,
+          "checkpointReturn": 14.348534201954411,
           "name": "AstraZeneca",
           "fullName": "AstraZeneca",
           "ticker": "XLON:AZN",
@@ -46,6 +50,9 @@
           "startValue": 33333.33
         },
         {
+          "instrumentId": "unilever",
+          "checkpointValue": 31059.6062453193,
+          "checkpointReturn": 9.308135114586724,
           "name": "Unilever",
           "fullName": "Unilever",
           "ticker": "XLON:ULVR",
@@ -57,6 +64,9 @@
           "startValue": 33333.33
         },
         {
+          "instrumentId": "andrada",
+          "checkpointValue": 51587.3119047619,
+          "checkpointReturn": -13.84615531334511,
           "name": "Andrada",
           "fullName": "Andrada Mining",
           "ticker": "XLON:ATM",
@@ -80,6 +90,10 @@
         {
           "label": "Q2",
           "value": 96034.43
+        },
+        {
+          "label": "Q3",
+          "value": 112744.95435596355
         }
       ],
       "rank": 1,
@@ -88,12 +102,16 @@
     {
       "id": "lee",
       "name": "Lee",
+      "publicThesis": "SK Hynix strength; European rearmament for Rheinmetall, even with peace; Venezuela upside for Chevron.",
       "value": 107115.34783712766,
       "cash": 0,
       "return": 7.115347837127661,
       "startValue": 100000,
       "holdings": [
         {
+          "instrumentId": "rheinmetall",
+          "checkpointValue": 17725.652502618235,
+          "checkpointReturn": -14.144918352854797,
           "name": "Rheinmetall",
           "fullName": "Rheinmetall",
           "ticker": "XETR:RHM",
@@ -105,6 +123,9 @@
           "startValue": 33333.33
         },
         {
+          "instrumentId": "sk-hynix",
+          "checkpointValue": 71842.82195401029,
+          "checkpointReturn": -29.182382752809733,
           "name": "SK Hynix",
           "fullName": "SK Hynix",
           "ticker": "XKRX:000660",
@@ -116,6 +137,9 @@
           "startValue": 33333.33
         },
         {
+          "instrumentId": "chevron",
+          "checkpointValue": 39851.1312707573,
+          "checkpointReturn": 2.932083555791709,
           "name": "Chevron",
           "fullName": "Chevron",
           "ticker": "XNYS:CVX",
@@ -139,6 +163,10 @@
         {
           "label": "Q2",
           "value": 144924.57
+        },
+        {
+          "label": "Q3",
+          "value": 129419.60572738582
         }
       ],
       "rank": 2,
@@ -147,12 +175,16 @@
     {
       "id": "michael",
       "name": "Michael",
+      "publicThesis": "AI reassessment, not a crash: cash flow, proprietary data and workflows may reward SaaS and effective AI users.",
       "value": 88474.35570458572,
       "cash": 0,
       "return": -11.525644295414283,
       "startValue": 100000,
       "holdings": [
         {
+          "instrumentId": "experian",
+          "checkpointValue": 29792.125852066714,
+          "checkpointReturn": 27.05882352941178,
           "name": "Experian",
           "fullName": "Experian",
           "ticker": "XLON:EXPN",
@@ -164,6 +196,9 @@
           "startValue": 33333.34
         },
         {
+          "instrumentId": "servicenow",
+          "checkpointValue": 39537.167032288366,
+          "checkpointReturn": -24.59779699162461,
           "name": "ServiceNow",
           "fullName": "ServiceNow",
           "ticker": "XNYS:NOW",
@@ -175,6 +210,9 @@
           "startValue": 33333.33
         },
         {
+          "instrumentId": "charter",
+          "checkpointValue": 18573.885148399633,
+          "checkpointReturn": 12.033298240214506,
           "name": "Charter",
           "fullName": "Charter Communications",
           "ticker": "XNAS:CHTR",
@@ -198,6 +236,10 @@
         {
           "label": "Q2",
           "value": 83988.25
+        },
+        {
+          "label": "Q3",
+          "value": 87903.17803275472
         }
       ],
       "rank": 3,
@@ -218,6 +260,10 @@
       "date": "2026-06-30"
     },
     {
+      "label": "Q3",
+      "date": "2026-09-30"
+    },
+    {
       "label": "Now",
       "date": "2026-11-05"
     }
@@ -234,22 +280,32 @@
       "date": "30 Jun"
     },
     {
+      "label": "Q3",
+      "name": "Lee",
+      "date": "30 Sept"
+    },
+    {
       "label": "Now",
       "name": "Roger",
       "date": "5 Nov"
     }
   ],
   "biggestWinner": {
-    "name": "SK Hynix",
-    "fullName": "SK Hynix",
-    "ticker": "XKRX:000660",
-    "currency": "KRW",
-    "quantity": 72.84803451937624,
-    "value": 50877.37467097139,
-    "costBasis": 33333.33,
-    "return": 52.632139276128086,
-    "startValue": 33333.33,
-    "player": "Lee"
+    "instrumentId": "experian",
+    "checkpointValue": 29792.125852066714,
+    "checkpointReturn": 27.05882352941178,
+    "name": "Experian",
+    "fullName": "Experian",
+    "ticker": "XLON:EXPN",
+    "currency": "GBP",
+    "quantity": 1208.605511240029,
+    "value": 37853.52461203771,
+    "costBasis": 33333.34,
+    "return": 27.05882352941178,
+    "startValue": 29792.125852066714,
+    "player": "Michael",
+    "since": "2026-09-30",
+    "checkpoint": "Q3"
   },
   "transactions": [
     {
@@ -379,29 +435,184 @@
         "roger": 96034.43,
         "michael": 83988.25
       }
+    },
+    {
+      "label": "Q3",
+      "date": "2026-09-30",
+      "values": {
+        "lee": 129419.60572738582,
+        "roger": 112744.95435596355,
+        "michael": 87903.17803275472
+      },
+      "prices": [
+        {
+          "instrumentId": "experian",
+          "price": 24.65,
+          "fxToGbp": 1,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPN.L?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "astrazeneca",
+          "price": 122.8,
+          "fxToGbp": 1,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZN.L?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "unilever",
+          "price": 46.035,
+          "fxToGbp": 1,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/ULVR.L?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "rheinmetall",
+          "price": 956.4000244140625,
+          "fxToGbp": 0.85463,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "servicenow",
+          "price": 134.00999450683594,
+          "fxToGbp": 0.7526464112725672,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "andrada",
+          "price": 0.065,
+          "fxToGbp": 1,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATM.L?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "charter",
+          "price": 110.9000015258789,
+          "fxToGbp": 0.7526464112725672,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "sk-hynix",
+          "price": 1776000,
+          "fxToGbp": 0.0005552934908320664,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/000660.KS?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        },
+        {
+          "instrumentId": "chevron",
+          "price": 204.2100067138672,
+          "fxToGbp": 0.7526464112725672,
+          "priceDate": "2026-09-30",
+          "fxDate": "2026-09-30",
+          "marketClosed": false,
+          "priceSource": {
+            "name": "Yahoo Finance",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1790121600&period2=1790812800&interval=1d&events=history"
+          },
+          "fxSource": {
+            "name": "ECB",
+            "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+KRW+GBP.EUR.SP00.A?startPeriod=2026-09-30&endPeriod=2026-09-30&format=csvdata"
+          }
+        }
+      ]
     }
   ],
   "changesSincePreviousCheckpoint": [
     {
       "playerId": "roger",
       "player": "Roger",
-      "previousValue": 96034.43,
+      "previousValue": 112744.95435596355,
       "currentValue": 112811.79216214104,
-      "change": 16777.362162141042
+      "change": 66.83780617748562
     },
     {
       "playerId": "lee",
       "player": "Lee",
-      "previousValue": 144924.57,
+      "previousValue": 129419.60572738582,
       "currentValue": 107115.34783712766,
-      "change": -37809.22216287235
+      "change": -22304.25789025816
     },
     {
       "playerId": "michael",
       "player": "Michael",
-      "previousValue": 83988.25,
+      "previousValue": 87903.17803275472,
       "currentValue": 88474.35570458572,
-      "change": 4486.105704585716
+      "change": 571.1776718309993
     }
   ],
   "warnings": []

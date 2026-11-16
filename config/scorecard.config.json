@@ -4,8 +4,8 @@
     "reportingCurrency": "GBP",
     "startingCapital": 100000,
     "rules": [
-      "£100,000 starting capital each",
-      "Trading at quarterly checkpoints",
+      "\u00a3100,000 starting capital each",
+      "Opening picks held; no trading enabled",
       "Dividends ignored",
       "Values in GBP (FX adjusted)"
     ]
@@ -16,8 +16,17 @@
     "barMax": 150000
   },
   "weeklyUpdate": {
-    "approvedPriceSources": ["Yahoo Finance"],
-    "approvedFxSources": ["ECB"],
+    "approvedPriceSources": [
+      "Yahoo Finance"
+    ],
+    "approvedFxSources": [
+      "ECB"
+    ],
     "plausibilityMaxChangePercent": 90
+  },
+  "publicTheses": {
+    "lee": "SK Hynix strength; European rearmament for Rheinmetall, even with peace; Venezuela upside for Chevron.",
+    "roger": "AstraZeneca and Unilever as established core holdings, plus a deliberately speculative Andrada Mining position.",
+    "michael": "AI reassessment, not a crash: cash flow, proprietary data and workflows may reward SaaS and effective AI users."
   }
 }

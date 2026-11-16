@@ -122,3 +122,53 @@ test('post-publication email gets one retry', async () => {
   await sendWithRetry({}, 'subject', 'body', async () => { attempts += 1; if (attempts === 1) throw new Error('temporary Gmail failure'); });
   assert.equal(attempts, 2);
 });
+
+test('Q3 checkpoint is exact-date, complete, and independently reconciles to holdings', async () => {
+  const { prepareCheckpoint } = await import('../src/checkpoint.js');
+  const ledger = await readLedger();
+  const q3 = ledger.checkpoints.find(point => point.label === 'Q3');
+  assert.equal(q3.date, '2026-09-30');
+  const before = structuredClone(ledger);
+  before.checkpoints = before.checkpoints.filter(point => point.label !== 'Q3');
+  const candidate = prepareCheckpoint(before, 'Q3', { valuationDate:q3.date, prices:q3.prices });
+  assert.deepEqual(candidate.checkpoints.at(-1).values, q3.values);
+  assert.equal(before.checkpoints.length, 2);
+  assert.equal(q3.prices.length, ledger.instruments.length);
+  const bad = structuredClone(q3.prices);
+  bad[0].priceDate = '2026-09-29';
+  assert.throws(() => prepareCheckpoint(before, 'Q3', {valuationDate:q3.date,prices:bad}), /exact-date/);
+  assert.throws(() => prepareCheckpoint(before, 'Q3', {valuationDate:q3.date,prices:bad.slice(1)}), /Incomplete/);
+  assert.deepEqual(candidate.transactions, ledger.transactions);
+});
+
+test('dashboard timeline, checkpoint leaders, and winner use Q3 rather than opening or weekly returns', async () => {
+  const ledger = await readLedger();
+  const config = JSON.parse(await readFile('config/scorecard.config.json','utf8'));
+  const result = buildScorecardData(ledger, config);
+  assert.deepEqual(result.timelineLabels.map(point=>point.label), ['Start','Q1','Q2','Q3','Now']);
+  assert.deepEqual(result.checkpointLeaders.map(point=>point.label), ['Q1','Q2','Q3','Now']);
+  assert.equal(result.checkpointLeaders[2].name, 'Lee');
+  const q3 = ledger.checkpoints.at(-1);
+  const ranked = ledger.instruments.map(instrument => {
+    const old = q3.prices.find(quote=>quote.instrumentId===instrument.id);
+    const now = ledger.valuations.prices.find(quote=>quote.instrumentId===instrument.id);
+    return {id:instrument.id, gain:(now.price*now.fxToGbp/(old.price*old.fxToGbp)-1)*100};
+  }).sort((a,b)=>b.gain-a.gain);
+  assert.equal(result.biggestWinner.instrumentId, ranked[0].id);
+  assert.ok(Math.abs(result.biggestWinner.return-ranked[0].gain)<1e-9);
+  assert.equal(result.biggestWinner.since,'2026-09-30');
+  assert.equal(result.chart.barMax,150000);
+});
+
+test('only explicitly public thesis strings are included in generated player data', async () => {
+  const ledger = await readLedger();
+  const config = JSON.parse(await readFile('config/scorecard.config.json','utf8'));
+  ledger.players[0].privateNotes = 'PRIVATE SENTINEL';
+  config.privateNotes = 'PRIVATE SENTINEL';
+  const result = buildScorecardData(ledger,config);
+  for (const player of result.players) {
+    assert.equal(player.publicThesis,config.publicTheses[player.id]);
+    assert.ok(player.publicThesis.length < 160);
+  }
+  assert.ok(!JSON.stringify(result).includes('PRIVATE SENTINEL'));
+});
