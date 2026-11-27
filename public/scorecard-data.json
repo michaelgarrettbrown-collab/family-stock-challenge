@@ -3,7 +3,7 @@
   "calculationVersion": "1.0.0",
   "title": "Family Stock Challenge",
   "year": 2026,
-  "asOf": "2026-11-19",
+  "asOf": "2026-11-26",
   "reportingCurrency": "GBP",
   "rules": [
     "£100,000 starting capital each",
@@ -27,127 +27,54 @@
   },
   "players": [
     {
-      "id": "lee",
-      "name": "Lee",
-      "publicThesis": "SK Hynix strength; European rearmament for Rheinmetall, even with peace; Venezuela upside for Chevron.",
-      "value": 103191.5031154234,
-      "cash": 0,
-      "return": 3.1915031154233997,
-      "startValue": 100000,
-      "holdings": [
-        {
-          "instrumentId": "rheinmetall",
-          "checkpointValue": 17725.652502618235,
-          "checkpointReturn": -25.802869432979257,
-          "name": "Rheinmetall",
-          "fullName": "Rheinmetall",
-          "ticker": "XETR:RHM",
-          "currency": "EUR",
-          "quantity": 21.68625293325576,
-          "value": 13151.925531224031,
-          "costBasis": 33333.33,
-          "return": -60.54421946074986,
-          "startValue": 33333.33
-        },
-        {
-          "instrumentId": "sk-hynix",
-          "checkpointValue": 71842.82195401029,
-          "checkpointReturn": -31.339731602882036,
-          "name": "SK Hynix",
-          "fullName": "SK Hynix",
-          "ticker": "XKRX:000660",
-          "currency": "KRW",
-          "quantity": 72.84803451937624,
-          "value": 49327.47437768705,
-          "costBasis": 33333.33,
-          "return": 47.98243793130494,
-          "startValue": 33333.33
-        },
-        {
-          "instrumentId": "chevron",
-          "checkpointValue": 39851.1312707573,
-          "checkpointReturn": 2.160470501841938,
-          "name": "Chevron",
-          "fullName": "Chevron",
-          "ticker": "XNYS:CVX",
-          "currency": "USD",
-          "quantity": 259.28216214784,
-          "value": 40712.10320651232,
-          "costBasis": 33333.34,
-          "return": 22.13628519227995,
-          "startValue": 33333.34
-        }
-      ],
-      "checkpoints": [
-        {
-          "label": "Start",
-          "value": 100000
-        },
-        {
-          "label": "Q1",
-          "value": 97392.3
-        },
-        {
-          "label": "Q2",
-          "value": 144924.57
-        },
-        {
-          "label": "Q3",
-          "value": 129419.60572738582
-        }
-      ],
-      "rank": 1,
-      "color": "green"
-    },
-    {
       "id": "roger",
       "name": "Roger",
       "publicThesis": "AstraZeneca and Unilever as established core holdings, plus a deliberately speculative Andrada Mining position.",
-      "value": 102186.8647044059,
+      "value": 103239.81196693808,
       "cash": 0,
-      "return": 2.1868647044058998,
+      "return": 3.2398119669380776,
       "startValue": 100000,
       "holdings": [
         {
           "instrumentId": "astrazeneca",
           "checkpointValue": 30098.036205882356,
-          "checkpointReturn": 8.338762214983708,
+          "checkpointReturn": 13.403908794788277,
           "name": "AstraZeneca",
           "fullName": "AstraZeneca",
           "ticker": "XLON:AZN",
           "currency": "GBP",
           "quantity": 245.09801470588238,
-          "value": 32607.83987647059,
+          "value": 34132.34952794118,
           "costBasis": 33333.33,
-          "return": -2.176470588235302,
+          "return": 2.3970588235294077,
           "startValue": 33333.33
         },
         {
           "instrumentId": "unilever",
           "checkpointValue": 31059.6062453193,
-          "checkpointReturn": 3.9209297273813615,
+          "checkpointReturn": 10.068426197458468,
           "name": "Unilever",
           "fullName": "Unilever",
           "ticker": "XLON:ULVR",
           "currency": "GBP",
           "quantity": 674.69547616638,
-          "value": 32277.43157979962,
+          "value": 34186.81977735047,
           "costBasis": 33333.33,
-          "return": -3.1676955773706994,
+          "return": 2.5604695880983686,
           "startValue": 33333.33
         },
         {
           "instrumentId": "andrada",
           "checkpointValue": 51587.3119047619,
-          "checkpointReturn": -27.692310626690208,
+          "checkpointReturn": -32.30769084050106,
           "name": "Andrada",
           "fullName": "Andrada Mining",
           "ticker": "XLON:ATM",
           "currency": "GBP",
           "quantity": 793650.9523809522,
-          "value": 37301.593248135694,
+          "value": 34920.64266164642,
           "costBasis": 33333.34,
-          "return": 11.90475736345562,
+          "return": 4.761907032557877,
           "startValue": 33333.34
         }
       ],
@@ -169,6 +96,79 @@
           "value": 112744.95435596355
         }
       ],
+      "rank": 1,
+      "color": "green"
+    },
+    {
+      "id": "lee",
+      "name": "Lee",
+      "publicThesis": "SK Hynix strength; European rearmament for Rheinmetall, even with peace; Venezuela upside for Chevron.",
+      "value": 98640.70422855939,
+      "cash": 0,
+      "return": -1.359295771440605,
+      "startValue": 100000,
+      "holdings": [
+        {
+          "instrumentId": "rheinmetall",
+          "checkpointValue": 17725.652502618235,
+          "checkpointReturn": -24.603218559973172,
+          "name": "Rheinmetall",
+          "fullName": "Rheinmetall",
+          "ticker": "XETR:RHM",
+          "currency": "EUR",
+          "quantity": 21.68625293325576,
+          "value": 13364.571476217716,
+          "costBasis": 33333.33,
+          "return": -59.906281561975014,
+          "startValue": 33333.33
+        },
+        {
+          "instrumentId": "sk-hynix",
+          "checkpointValue": 71842.82195401029,
+          "checkpointReturn": -39.40165293449548,
+          "name": "SK Hynix",
+          "fullName": "SK Hynix",
+          "ticker": "XKRX:000660",
+          "currency": "KRW",
+          "quantity": 72.84803451937624,
+          "value": 43535.56258934363,
+          "costBasis": 33333.33,
+          "return": 30.606700828700962,
+          "startValue": 33333.33
+        },
+        {
+          "instrumentId": "chevron",
+          "checkpointValue": 39851.1312707573,
+          "checkpointReturn": 4.741242800369894,
+          "name": "Chevron",
+          "fullName": "Chevron",
+          "ticker": "XNYS:CVX",
+          "currency": "USD",
+          "quantity": 259.28216214784,
+          "value": 41740.57016299804,
+          "costBasis": 33333.34,
+          "return": 25.221685444657037,
+          "startValue": 33333.34
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "Start",
+          "value": 100000
+        },
+        {
+          "label": "Q1",
+          "value": 97392.3
+        },
+        {
+          "label": "Q2",
+          "value": 144924.57
+        },
+        {
+          "label": "Q3",
+          "value": 129419.60572738582
+        }
+      ],
       "rank": 2,
       "color": "blue"
     },
@@ -176,51 +176,51 @@
       "id": "michael",
       "name": "Michael",
       "publicThesis": "AI reassessment, not a crash: cash flow, proprietary data and workflows may reward SaaS and effective AI users.",
-      "value": 83686.28368381073,
+      "value": 88836.7388246273,
       "cash": 0,
-      "return": -16.313716316189264,
+      "return": -11.163261175372696,
       "startValue": 100000,
       "holdings": [
         {
           "instrumentId": "experian",
           "checkpointValue": 29792.125852066714,
-          "checkpointReturn": 16.348884381338745,
+          "checkpointReturn": 21.703853955375262,
           "name": "Experian",
           "fullName": "Experian",
           "ticker": "XLON:EXPN",
           "currency": "GBP",
           "quantity": 1208.605511240029,
-          "value": 34662.806062364034,
+          "value": 36258.16533720087,
           "costBasis": 33333.34,
-          "return": 3.9883973894126346,
+          "return": 8.774474256707787,
           "startValue": 33333.34
         },
         {
           "instrumentId": "servicenow",
           "checkpointValue": 39537.167032288366,
-          "checkpointReturn": -33.002614953594865,
+          "checkpointReturn": -30.269863910081696,
           "name": "ServiceNow",
           "fullName": "ServiceNow",
           "ticker": "XNYS:NOW",
           "currency": "USD",
           "quantity": 391.99214361038634,
-          "value": 26488.868033062587,
+          "value": 27569.32037771299,
           "costBasis": 33333.33,
-          "return": -20.53338795415104,
+          "return": -17.2920305960641,
           "startValue": 33333.33
         },
         {
           "instrumentId": "charter",
           "checkpointValue": 18573.885148399633,
-          "checkpointReturn": 21.324157053516334,
+          "checkpointReturn": 34.6473982685755,
           "name": "Charter",
           "fullName": "Charter Communications",
           "ticker": "XNAS:CHTR",
           "currency": "USD",
           "quantity": 222.5257166885858,
-          "value": 22534.609588384115,
+          "value": 25009.25310971345,
           "costBasis": 33333.33,
-          "return": -32.39616447446411,
+          "return": -24.97223316808297,
           "startValue": 33333.33
         }
       ],
@@ -265,7 +265,7 @@
     },
     {
       "label": "Now",
-      "date": "2026-11-19"
+      "date": "2026-11-26"
     }
   ],
   "checkpointLeaders": [
@@ -286,22 +286,22 @@
     },
     {
       "label": "Now",
-      "name": "Lee",
-      "date": "19 Nov"
+      "name": "Roger",
+      "date": "26 Nov"
     }
   ],
   "biggestWinner": {
     "instrumentId": "charter",
     "checkpointValue": 18573.885148399633,
-    "checkpointReturn": 21.324157053516334,
+    "checkpointReturn": 34.6473982685755,
     "name": "Charter",
     "fullName": "Charter Communications",
     "ticker": "XNAS:CHTR",
     "currency": "USD",
     "quantity": 222.5257166885858,
-    "value": 22534.609588384115,
+    "value": 25009.25310971345,
     "costBasis": 33333.33,
-    "return": 21.324157053516334,
+    "return": 34.6473982685755,
     "startValue": 18573.885148399633,
     "player": "Michael",
     "since": "2026-09-30",
@@ -594,25 +594,25 @@
   ],
   "changesSincePreviousCheckpoint": [
     {
-      "playerId": "lee",
-      "player": "Lee",
-      "previousValue": 129419.60572738582,
-      "currentValue": 103191.5031154234,
-      "change": -26228.102611962415
-    },
-    {
       "playerId": "roger",
       "player": "Roger",
       "previousValue": 112744.95435596355,
-      "currentValue": 102186.8647044059,
-      "change": -10558.089651557646
+      "currentValue": 103239.81196693808,
+      "change": -9505.142389025466
+    },
+    {
+      "playerId": "lee",
+      "player": "Lee",
+      "previousValue": 129419.60572738582,
+      "currentValue": 98640.70422855939,
+      "change": -30778.901498826424
     },
     {
       "playerId": "michael",
       "player": "Michael",
       "previousValue": 87903.17803275472,
-      "currentValue": 83686.28368381073,
-      "change": -4216.894348943984
+      "currentValue": 88836.7388246273,
+      "change": 933.5607918725873
     }
   ],
   "warnings": []
